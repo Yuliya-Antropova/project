@@ -1,0 +1,20 @@
+.header {
+    background-color: #222;
+    min-height: 75px;
+    @include flex-sb-ac;
+}
+
+.logo-block {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+}
+
+.logo-block-float-l {
+    width: 111px;
+}
+
+.logo-block-float-r {
+    width: 169px;
+    padding-top: 7px;
+}

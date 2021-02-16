@@ -1,0 +1,106 @@
+.product-background {
+    @include flex-jcc;
+    align-items: center;
+    position: relative;
+    min-height: 777px;
+    background-color: #F7F7F7;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+.slider-img {
+    border: none;
+}
+.slider-btn {
+	background-color: #d8d8d8;
+    color: $black;
+	padding: 13px 17px;
+	border: none;
+	position: absolute;
+    font-size: 22px;
+}
+.slider-btn:hover {
+    color: $pink;
+}
+.slider-btn-left {
+	left: 5px;
+}
+.slider-btn-right {
+	right: 5px;
+}
+.product-description {
+    margin-top: -65px;
+    z-index: 1;
+    position: relative;
+}
+.product-description-2 {
+    outline: 1px solid #EAEAEA;
+    min-height: 600px;
+    background-color: #fff;
+    text-align: center; 
+    padding-top: 65px;
+    padding-bottom: 65px;
+}
+.filter-block-product {
+    display: inline-block;
+}
+.filter-block-center-product {
+    width: 373px;
+}
+.filter-block-left-p svg {
+    margin-left: 9px;
+}
+.product-description {
+    margin-bottom: 81px;
+}
+.product-description-p {
+    @include text-w-s-lh (300, 14px, 17px);
+}
+.product-description-hr {
+    margin: 12px;
+    background-color: $pink;
+    @include size(63px, 3px);
+    display: inline-block;
+}
+.product-description-h2 {
+    @include text-w-s-lh (300, 18px, 22px);
+    margin-bottom: 48.4px; 
+}
+.product-description-text {
+    width: 555px;
+    @include text-w-s-lh (300, 14px, 17px);
+    margin-bottom: 32px;
+    display: inline-block;
+}
+.product-description-price {
+    @include text-w-s-lh (300, 24px, 29px);
+}
+.product-description-hr2 {
+    margin: 64.5px;
+    background-color: #EAEAEA;
+    @include size(642px, 1px);
+    display: inline-block;
+}
+.button-cart-product-block {
+    @include flex-jcc;
+    margin-top: 48.5px;
+}
+.button-cart-product {
+    color: #FF6A6A;
+    outline: 1px solid #FF6A6A;
+    @include size(212px, 49px);
+    padding-right: 0;
+    text-align: center;
+   
+}
+.products-models-block-btn:hover {
+    background-color: #FF6A6A;
+    color: #FFf;
+    
+}
+.products-svg {
+    fill: #FF6A6A;
+    margin-left: 24px;
+}
+.products-models-catalog {
+    min-height: 0;
+    margin-bottom: 98px;
+}

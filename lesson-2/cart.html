@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shopping Cart</title>
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@100;300;400;700;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.2/css/all.css" integrity="sha384-vSIIfh2YWi9wW0r9iZe7RJPrKwp6bG+s9QZMoITbCckVJqGCCRhc+ccxNcdpHuYu" crossorigin="anonymous">
+    <link rel="stylesheet" href="style.css"> </head>
+
+<body>
+    <header class="header container">
+        <div class="logo-block logo-block-float-l">
+            <a href="index.html"><img src="img/logo.png" alt="logo" class="logo"></a>
+            <a href="#"><img src="img/search.png" alt="search" class="search"></a>
+        </div>
+        <div class="logo-block logo-block-float-r">
+            <a href="#"><img src="img/menu.png" alt="menu"></a>
+            <a href="registration.html"><img src="img/person.png" alt="profile"></a>
+            <a href="#"><img src="img/shopping_cart.png" alt="shopping cart"></a>
+        </div>
+    </header>
+    <main>
+        <section class="new_arrivals container">
+            <h1 class="new_arrivals-left">SHOPPING CART</h1>
+        </section>
+        <section class="cart-block  container">
+           <h2 class="visually-hidden">Заголовок секции</h2>
+           <div class="cart-block-left">
+               <div class="cart-product">
+                   <img src="img/Image3.jpg" alt="product" class="cart-product-img">
+                   <div class="cart-product-text"><p class="cart-product-h2">MANGO PEOPLE <br>T-SHIRT</p>
+                       <p class="cart-product-p">Price: <span class="cart-product-sp">$300</span></p>
+                       <p class="cart-product-p">Color: Red</p>
+                       <p class="cart-product-p">Size: XI</p>
+                       <p class="cart-product-p">Quantity: </p>
+                       <form action="quantity">
+                           <input type="number" class="number-cart" min="1" value="1">
+                       </form>
+                    </div>
+               </div>
+               <div class="cart-product">
+                <img src="img/Image2.jpg" alt="product" class="cart-product-img">
+                <div class="cart-product-text"><p class="cart-product-h2">MANGO PEOPLE <br>T-SHIRT</p>
+                    <p class="cart-product-p">Price: <span class="cart-product-sp">$300</span></p>
+                    <p class="cart-product-p">Color: Red</p>
+                    <p class="cart-product-p">Size: XI</p>
+                    <p class="cart-product-p">Quantity: </p>
+                    <form action="quantity">
+                        <input type="number" class="number-cart" min="1" value="1">
+                    </form>
+                 </div>
+            </div>
+            <div class="button-cart-block"> 
+                <form action="#" class="button-cart">
+                    <input type="button" value="CLEAR SHOPPING CART" class="products-models-block-btn white-card">
+                </form>
+            <form action="#" class="button-cart">
+                <input type="button" value="CONTINUE SHOPPING" class="products-models-block-btn white-card">
+            </form>
+        </div>
+    </div>
+        <div class="cart-block-right">
+            <form class="shipping-adress">
+                <fieldset class="shipping-adress-legend">
+                    <legend>SHIPPING ADRESS</legend>
+                    <input type="text" placeholder="Bangladesh" class="shipping-adress-details">
+                    <input type="text" placeholder="State" class="shipping-adress-details">
+                    <input type="text" placeholder="Postcode / Zip" class="shipping-adress-details">
+                    <input type="button" value="GET A QUOTE" class="products-models-block-btn white-card white-card-2">
+                </fieldset>
+            </form> 
+            <div class="buy-cart">
+                <p class="buy-cart-sub">SUB TOTAL<span class="buy-cart-sub-span">$900</span></p>
+                <p class="buy-cart-tot">GRAND TOTAL<span class="buy-cart-tot-span">$900</span></p>
+                <form action="#" class="button-cart button-cart-shop">
+                    <input type="button" value="PROCEED TO CHECKOUT" class="cart-block-btn">
+                </form>
+            </div>
+        </div>
+         
+
+
+        </section>
+
+    </main>
+    <section class="feedback-block container">
+        <h2 class="visually-hidden">Заголовок секции</h2>
+        <div class="feedback-block-text"> <img src="img/photo.png" alt="photo">
+            <p class="feedback-block-text-p">“Vestibulum quis porttitor dui! Quisque viverra nunc mi, a pulvinar purus condimentum“</p>
+        </div>
+        <div class="feedback-block-input">
+            <div class="feedback-block-input-header">
+                <h2 class="feedback-block-input-text-h2">SUBSCRIBE</h2>
+                <h2 class="feedback-block-input-text-h3">FOR OUR NEWLETTER AND PROMOTION</h2> </div>
+            <form class="feedback-block-input-button" action="#">
+                <input type="email" name="email" id="email" placeholder="Enter Your Email" required>
+                <input type="submit" value="Subscribe"> </form>
+        </div>
+    </section>
+    <footer class="footer container">
+        <p class="links-block-copy">© 2021 Brand All Rights Reserved.</p>
+        <div class="links-block-links"> <a href="#" class="links-block-link"><i class="fab fa-facebook-f"></i></a> <a href="#" class="links-block-link"><i class="fab fa-instagram"></i></a> <a href="#" class="links-block-link"><i class="fab fa-pinterest-p"></i></a> <a href="#" class="links-block-link"><i class="fab fa-twitter"></i></a> </div>
+    </footer>
+</body>
+
+</html>

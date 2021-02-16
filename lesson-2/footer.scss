@@ -1,0 +1,144 @@
+.promises {
+    margin-top: 95px;
+    background-color: #222224;
+    min-height: 341px;
+}
+
+.promises-container {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    padding-top: 104px;
+    width: 1140px;
+}
+
+.promises-block {
+    @include size(360px, 134px);
+    text-align: center;
+}
+
+.promises-block-img {
+    @include size(40px, 40px);
+    margin: auto;
+}
+
+.promises-block-img-svg {
+    fill: $pink;
+}
+
+.promises-block-h2 {
+    @include text-w-s-lh (400, 20px, 24px);
+    color: #FBFBFB;
+    margin: 0;
+    padding-top: 28px;
+    padding-bottom: 16px;
+}
+
+.promises-block-p {
+    @include text-w-s-lh (300, 14px, 17px);
+    text-align: center;
+    color: #FBFBFB;
+    margin: 0;
+}
+
+.feedback-block {
+    min-height: 448px;
+    background-image: url(img/landscape.jpg);
+    background-repeat: no-repeat;
+    display: flex;
+    justify-content: space-between;
+    background-size: cover;
+}
+
+.feedback-block-text {
+    @include size(360px, 225px);
+    padding-top: 97px;
+    text-align: center;
+    display: inline-block;
+}
+
+.feedback-block-text-p {
+    @include text-w-s-lh (normal, 20px, 24px);
+    color: #222224;
+    margin-top: 30px;
+}
+
+.feedback-block-input {
+    padding-top: 150px;
+    @include size(557px, 142px);
+    text-align: center;
+}
+
+.feedback-block-input-text-h2 {
+    @include text-w-s-lh (700, 24px, 38px);
+}
+
+.feedback-block-input-text-h3 {
+    @include text-w-s-lh (400, 18px, 30px);
+}
+
+.feedback-block-input-button {
+    height: 49px;
+    @include flex-jcc;
+    margin-top: 32px;
+}
+
+.feedback-block-input-button input[type="email"] {
+    width: 256px;
+    border: 0px;
+    background: #E1E1E1;
+    border-bottom-left-radius: 24.5px;
+    border-top-left-radius: 24.5px;
+    padding-left: 22px;
+}
+
+.feedback-block-input-button input[type="email"]:focus {
+    background: #FFFFFF;
+    outline: none;
+}
+
+.feedback-block-input-button input[type="submit"] {
+    width: 100px;
+    background: $pink;
+    border: 0px;
+    border-bottom-right-radius: 24.5px;
+    border-top-right-radius: 24.5px;
+    color: #FFFFFF;
+    cursor: pointer;
+}
+
+.feedback-block-input-button input[type="submit"]:focus {
+    outline: none;
+    background: $black;
+}
+
+.footer {
+    min-height: 79px;
+    background: #222224;
+    @include flex-sb-ac;
+}
+
+.links-block-copy {
+    @include text-w-s-lh (400, 16px, 19px);
+    color: #FBFBFB;
+}
+
+.links-block-links {
+    display: flex;
+}
+
+.links-block-link {
+    color: $black;
+    text-decoration: none;
+    font-size: 16px;
+    background-color: #FFFFFF;
+    margin: 3.5px;
+    @include size(32px, 32px);
+    @include flex-jcc;
+    align-items: center;
+}
+
+.links-block-link:hover {
+    color: #FFFFFF;
+    background-color: $pink;
+}

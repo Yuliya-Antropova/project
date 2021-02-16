@@ -1,0 +1,106 @@
+.promo {
+    min-height: 764px;
+    @include flex-jcc;
+    background-color: #F1E4E6;
+}
+
+.promo-men-bcg {
+    background-color: #F1E4E6;
+}
+
+.promo-men {
+    height: 764px;
+    background-size: 100%;
+    background-image: url(img/promo_men.jpg);
+}
+
+.promo-bgc {
+    width: 801px;
+}
+
+.promo-bgc-text {
+    height: 92px;
+    padding-left: 16px;
+    border-left: 12px solid $pink;
+    margin-top: 290px;
+    margin-left: 63.5px;
+}
+
+.promo-bgc-text-h2 {
+    @include text-w-s-lh (900, 48px, 58px);
+}
+
+.promo-bgc-text-p {
+    @include text-w-s-lh (700, 32px, 38px);
+}
+
+.promo-bgc-text-p-pink {
+    color: $pink;
+}
+
+.sales {
+    min-height: 470px;
+    margin-top: 64px;
+}
+
+.sales-people {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.sales-people-div {
+    @include min-size (360px, 260px);
+    text-align: center;
+}
+
+.sales-people-link {
+    text-decoration: none;
+    display: block;
+    @include size(100%, 100%);
+}
+
+.sales-people-p {
+    @include text-w-s-lh (400, 16px, 19px);
+    color: #FFFFFF;
+    padding-bottom: 7px;
+    margin: 0;
+    text-transform: uppercase;
+}
+
+.sales-people-p-w {
+    padding-top: 105px;
+}
+
+.sales-people-p-a {
+    padding-top: 65px;
+}
+
+.sales-people-h2 {
+    @include text-w-s-lh (700, 24px, 28.8px);
+    color: $pink;
+    margin: 0;
+}
+
+.sales-people-div-w {
+    background-image: url(img/sale-for-women.jpg);
+    background-color: #211616;
+}
+
+.sales-people-div-m {
+    background-image: url(img/sale-for-men.jpg);
+    background-color: #211616;
+}
+
+.sales-people-div-k {
+    background-image: url(img/sale-for-kids.jpg);
+    background-color: #211616;
+}
+
+.sales-people-div-a {
+    background-image: url(img/sale-ACCESORIES.jpg);
+    @include size(1140px, 180px);
+    text-align: center;
+    margin-top: 30px;
+    background-color: #211616;
+}
