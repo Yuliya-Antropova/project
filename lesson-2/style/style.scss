@@ -92,3 +92,63 @@ body {
     color: #FF6A6A;
 }
 
+.registration-block {
+    margin-top: 64px;
+    margin-bottom: 96px;
+}
+.radio-reg-block {
+    margin-top: 11px;
+    margin-bottom: 33px;
+    @include flex-sb-ac();
+    @include size(132px, 17px)
+    @include text-w-s-lh (300, 11px, 13px);
+}
+.radio-reg {
+    margin-right: 10px;
+    cursor: pointer; 
+}
+.reg-emeil {
+    text-transform: lowercase;
+}
+.reg-password {
+    text-transform: none;
+}
+.login-text {
+    @include text-w-s-lh(300, 13px, 16px);
+    color: #B1B1B1;
+    margin-top: -5px;
+    margin-bottom: 39px;
+}
+.cart-block-btn-r {
+    display: flex;
+    position: relative;
+    align-items: center;
+}
+.cart-block-btn-reg {
+    width: 167px;
+    text-align: left;
+    padding-left: 27px;
+}
+.cart-block-svg {
+   fill: white;
+   position: absolute;
+    margin-left: 120px;
+}
+.loyalty {
+    width: 652px;
+    &-p {
+        @include text-w-s-lh(300, 24px, 29px);
+        margin-bottom: 22px;
+    }
+    &-li {
+        margin-bottom: 16px;
+    }
+    &-ul {
+        list-style-type: none;
+    }
+    &-svg {
+        margin-right: 22px;
+        fill: black;
+    }
+    
+}

@@ -69,6 +69,9 @@
 .cart-block-right {
     margin-top: 113px;
 }
+.shipping-adress {
+    width: 360px;
+}
 .shipping-adress-legend {
     border: none;
     padding-top: 20px; 
@@ -76,11 +79,11 @@
     flex-direction: column;
 }
 .shipping-adress-details {
-    width: 360px;
     height: 45px;
     padding-left: 17px;
     margin-bottom: 20px;
     border: 1px solid #A4A4A4;
+    text-transform: capitalize;
 }
 .buy-cart {
     @include size(360px, 214px);

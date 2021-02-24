@@ -11,7 +11,7 @@
 .promo-men {
     height: 764px;
     background-size: 100%;
-    background-image: url(img/promo_men.jpg);
+    background-image: url(../img/promo-men.png);
 }
 
 .promo-bgc {
@@ -52,6 +52,11 @@
 .sales-people-div {
     @include min-size (360px, 260px);
     text-align: center;
+    transition-timing-function: ease;
+    &:hover {
+        transform: rotateY(360deg);
+        transition: 3s;
+    }
 }
 
 .sales-people-link {
@@ -83,22 +88,23 @@
 }
 
 .sales-people-div-w {
-    background-image: url(img/sale-for-women.jpg);
+    background-image: url(../img/sale-for-women.jpg);
     background-color: #211616;
+    
 }
 
 .sales-people-div-m {
-    background-image: url(img/sale-for-men.jpg);
+    background-image: url(../img/sale-for-men.jpg);
     background-color: #211616;
 }
 
 .sales-people-div-k {
-    background-image: url(img/sale-for-kids.jpg);
+    background-image: url(../img/sale-for-kids.jpg);
     background-color: #211616;
 }
 
 .sales-people-div-a {
-    background-image: url(img/sale-ACCESORIES.jpg);
+    background-image: url(../img/sale-ACCESORIES.jpg);
     @include size(1140px, 180px);
     text-align: center;
     margin-top: 30px;

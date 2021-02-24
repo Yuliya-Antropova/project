@@ -24,7 +24,50 @@
 
 .promises-block-img-svg {
     fill: $pink;
+    
 }
+.right-svg { 
+    cursor: pointer;
+    &:hover { 
+        animation: right-block 2s infinite alternate;
+    }
+}
+@keyframes right-block { 
+    0% {
+        transform: translateX(0);
+    }
+    50% {
+        transform: translateX(100%);
+    }  
+    100% {
+        transform: translateX(0);
+    }
+    
+}
+.rotate-svg { 
+    cursor: pointer;
+    &:hover { 
+        transform: rotateX(360deg);
+        transition: 2s;
+    }
+}
+.up-svg {
+    cursor: pointer;
+    &:hover {
+        animation: up-block 1s ease-out infinite alternate;
+    }
+}
+@keyframes up-block { 
+    0% {
+        transform: scale(1,1) translateY(0);
+    }
+    50% {
+        transform: scale(1,0.9) translateY(-50%);
+    } 
+    100% {
+        transform: scale(1,1) translateY(0%);
+    } 
+} 
 
 .promises-block-h2 {
     @include text-w-s-lh (400, 20px, 24px);
@@ -43,7 +86,7 @@
 
 .feedback-block {
     min-height: 448px;
-    background-image: url(img/landscape.jpg);
+    background-image: url(../img/landscape.jpg);
     background-repeat: no-repeat;
     display: flex;
     justify-content: space-between;
@@ -55,6 +98,10 @@
     padding-top: 97px;
     text-align: center;
     display: inline-block;
+}
+.feedback-block-text img:hover {
+    transform: scale(1.4);
+    transition: 0.5s;
 }
 
 .feedback-block-text-p {
@@ -136,9 +183,9 @@
     @include size(32px, 32px);
     @include flex-jcc;
     align-items: center;
-}
-
-.links-block-link:hover {
-    color: #FFFFFF;
-    background-color: $pink;
+    &:hover {
+        color: #FFFFFF;
+        background-color: $pink;
+        transition: 0.4s;
+    }
 }

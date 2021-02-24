@@ -1,0 +1,9 @@
+{
+    "version": 3,
+    "mappings": "",
+    "sources": [
+        "product-catalog.scss"
+    ],
+    "names": [],
+    "file": "product-catalog.css"
+}
