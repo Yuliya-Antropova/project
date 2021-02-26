@@ -1,29 +1,27 @@
 .promo {
     min-height: 764px;
     @include flex-jcc;
+    align-items: center;
     background-color: #F1E4E6;
 }
 
 .promo-men-bcg {
-    background-color: #F1E4E6;
-}
-
-.promo-men {
-    height: 764px;
-    background-size: 100%;
-    background-image: url(../img/promo-men.png);
+    margin-left: -20%;
+    min-height: 764px;
 }
 
 .promo-bgc {
-    width: 801px;
+    display: flex;
+    width: 50%;
 }
+
+    
 
 .promo-bgc-text {
     height: 92px;
     padding-left: 16px;
     border-left: 12px solid $pink;
-    margin-top: 290px;
-    margin-left: 63.5px;
+    margin-left: 5.57%;
 }
 
 .promo-bgc-text-h2 {
@@ -50,19 +48,24 @@
 }
 
 .sales-people-div {
-    @include min-size (360px, 260px);
+    @include min-size (31.6%, 260px);
     text-align: center;
-    transition-timing-function: ease;
+    background-size: cover;
+    /*transition-timing-function: ease;
     &:hover {
         transform: rotateY(360deg);
         transition: 3s;
-    }
+    }*/
 }
 
 .sales-people-link {
     text-decoration: none;
     display: block;
     @include size(100%, 100%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
 }
 
 .sales-people-p {
@@ -71,14 +74,6 @@
     padding-bottom: 7px;
     margin: 0;
     text-transform: uppercase;
-}
-
-.sales-people-p-w {
-    padding-top: 105px;
-}
-
-.sales-people-p-a {
-    padding-top: 65px;
 }
 
 .sales-people-h2 {
@@ -105,8 +100,149 @@
 
 .sales-people-div-a {
     background-image: url(../img/sale-ACCESORIES.jpg);
-    @include size(1140px, 180px);
+    @include min-size(100%, 180px);
     text-align: center;
     margin-top: 30px;
     background-color: #211616;
+    background-size: cover;
+}
+@media (max-width: 1170px) {
+    .promo {
+        min-height: 500px;
+    }
+    
+    .promo-men-bcg {
+        min-height: 500px;
+        margin-left: -10%;
+    }
+    .promo-men-bcg img {
+        max-height: 500px;
+    }
+    
+    .promo-men {
+        min-height: 500px;
+    }
+    .promo-bgc-text-h2 {
+        @include text-w-s-lh (900, 46px, 50px);
+    }
+    
+    .promo-bgc-text-p {
+        @include text-w-s-lh (700, 28px, 34px);
+    }
+
+}
+@media (max-width: 867px){
+    .promo-bgc-text {
+        margin-left: 25px;
+    }    
+    .promo-bgc-text-h2 {
+        @include text-w-s-lh (900, 44px, 52px);
+    }
+    
+    .promo-bgc-text-p {
+        @include text-w-s-lh (700, 24px, 29px);
+    }
+}
+@media (max-width: 829px) {
+    
+    .promo {
+        min-height: 368px;
+    }
+    
+    .promo-men-bcg {
+        min-height: 368px;
+        margin-left: -5%;
+    }
+    .promo-men-bcg img {
+        max-height: 368px;
+    }
+    
+    .promo-men {
+        min-height: 368px;
+    }
+    .promo-bgc-text {
+        margin-left: 39px;
+    } 
+    .sales {
+        min-height: 303px;
+        margin-top: 20px;
+    }
+    .sales-people-div {
+        min-height: 168px;
+    }
+    .sales-people-div-a {
+        min-height: 116px;
+        margin-top: 20px;
+    }
+}
+@media (max-width: 747px) {
+    
+    .promo {
+        min-height: 250px;
+    }
+    
+    .promo-men-bcg {
+        min-height:250px;
+        margin-left: -5%;
+    }
+    .promo-men-bcg img {
+        max-height: 250px;
+    }
+    
+    .promo-men {
+        min-height: 250px;
+    }
+    .promo-bgc-text {
+        margin-left: 20px;
+    }    
+    .promo-bgc-text-h2 {
+        @include text-w-s-lh (900, 38px, 46px);
+    }
+    
+    .promo-bgc-text-p {
+        @include text-w-s-lh (700, 20px, 24px);
+    }
+}
+@media (max-width: 611px) {
+    
+    .promo {
+        min-height: 363px;
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    .promo-men-bcg {
+        display: none;
+    }
+    .promo-bgc {
+        width: 263px;
+    }
+    .promo-bgc-text {
+        margin-top: 148px;
+        height: 72px;
+        margin: 0;
+        padding-left: 15px;
+    }
+    
+    .sales {
+        flex-direction: column;
+        margin-top: 32px;
+    }
+    .sales-people-div {
+        min-height: 247px;
+        width: 100%;
+        margin-top: 32px;
+        margin-left: 8px;
+        margin-right: 8px;
+    }
+    
+    .sales-people-div-a {
+        width: 100%;
+        min-width: auto;
+        min-height: 111px;
+        margin-top: 32px;
+        margin-left: 8px;
+        margin-right: 8px;
+        background-image: url(../img/sale-ACCESORIES-size375.jpg);
+    }
 }

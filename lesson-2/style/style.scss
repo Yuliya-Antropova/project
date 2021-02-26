@@ -26,11 +26,11 @@ $pink: #F16D7F;
 }
 
 @import "index-styles.scss";
-@import "header.scss";
-@import "footer.scss";
 @import "product-catalog.scss";
 @import "product.scss";
 @import "cart.scss";
+@import "header.scss";
+@import "footer.scss";
 
 * {
     box-sizing: border-box;
@@ -45,6 +45,21 @@ body {
 
 .container {
     padding: 0 calc(50% - 1140px / 2);
+}
+@media (max-width: 1160px) {
+    .container {
+        padding: 0 16px;
+    }
+}
+@media (max-width: 788px) {
+    .container {
+        padding: 0 16px;
+    }
+}
+@media (max-width: 400px) {
+    .container {
+        padding: 0 8px;
+    }
 }
 
 .visually-hidden {
@@ -100,7 +115,7 @@ body {
     margin-top: 11px;
     margin-bottom: 33px;
     @include flex-sb-ac();
-    @include size(132px, 17px)
+    @include size(132px, 17px);
     @include text-w-s-lh (300, 11px, 13px);
 }
 .radio-reg {
@@ -125,20 +140,23 @@ body {
     align-items: center;
 }
 .cart-block-btn-reg {
-    width: 167px;
+    width: auto;
     text-align: left;
-    padding-left: 27px;
+    padding-left: 29px;
+    padding-right: 66px;
 }
 .cart-block-svg {
    fill: white;
    position: absolute;
-    margin-left: 120px;
+   margin-left: 121px;
 }
 .loyalty {
-    width: 652px;
+    width: 57.2%;
+    margin-left: 22px;
     &-p {
         @include text-w-s-lh(300, 24px, 29px);
         margin-bottom: 22px;
+        display: flex;
     }
     &-li {
         margin-bottom: 16px;
@@ -151,4 +169,23 @@ body {
         fill: black;
     }
     
+}
+@media (max-width: 788px) {
+    .loyalty-p {
+        @include text-w-s-lh(300, 16px, 19px);
+    }
+    .loyalty-svg {
+        margin-right: 22px;
+        fill: black;
+    }
+}
+@media (max-width: 590px) {
+    .registration-block {
+        flex-direction: column;
+    }
+    .loyalty {
+        margin-left: 0;
+        margin-top: 40px;
+        width: 100%;
+    }
 }

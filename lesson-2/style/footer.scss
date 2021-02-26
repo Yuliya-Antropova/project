@@ -9,7 +9,7 @@
     justify-content: space-between;
     flex-wrap: wrap;
     padding-top: 104px;
-    width: 1140px;
+    width: 100%;
 }
 
 .promises-block {
@@ -73,7 +73,7 @@
     @include text-w-s-lh (400, 20px, 24px);
     color: #FBFBFB;
     margin: 0;
-    padding-top: 28px;
+    padding-top: 20px;
     padding-bottom: 16px;
 }
 
@@ -94,15 +94,15 @@
 }
 
 .feedback-block-text {
-    @include size(360px, 225px);
+    width: 360px;
     padding-top: 97px;
     text-align: center;
     display: inline-block;
 }
-.feedback-block-text img:hover {
+/*.feedback-block-text img:hover {
     transform: scale(1.4);
     transition: 0.5s;
-}
+}*/
 
 .feedback-block-text-p {
     @include text-w-s-lh (normal, 20px, 24px);
@@ -112,7 +112,7 @@
 
 .feedback-block-input {
     padding-top: 150px;
-    @include size(557px, 142px);
+    width: 557px;
     text-align: center;
 }
 
@@ -127,7 +127,7 @@
 .feedback-block-input-button {
     height: 49px;
     @include flex-jcc;
-    margin-top: 32px;
+    margin-top: 26px;
 }
 
 .feedback-block-input-button input[type="email"] {
@@ -137,6 +137,7 @@
     border-bottom-left-radius: 24.5px;
     border-top-left-radius: 24.5px;
     padding-left: 22px;
+    padding-right: 22px;
 }
 
 .feedback-block-input-button input[type="email"]:focus {
@@ -189,3 +190,69 @@
         transition: 0.4s;
     }
 }
+@media (max-width: 1130px) {
+    .promises {
+        margin-top: 65px;
+        min-height: 610px;
+    }
+    .promises-container {
+        flex-direction: column;
+        align-items: center;
+        padding-top: 0;
+    }
+    .promises-block {
+        margin-top: 48px;
+    }
+}
+@media (max-width: 788px) {
+    
+    .feedback-block {
+        min-height: 614px;
+        flex-direction: column;
+        justify-content: normal;
+        align-items: center;
+    }
+    .feedback-block-text {
+        padding-top: 64px;
+    }
+    .feedback-block-input {
+        padding-top: 48px;
+        justify-content: none;
+        width: 100%;
+    }
+    .feedback-block-input-button {
+        width: 100%;
+    }
+
+
+    .links-block-copy {
+      margin-left: 16px;
+    }
+    .links-block-links {
+      margin-right: 16px;
+    }
+  }
+  @media (max-width: 400px) {
+    .promises {
+        margin-top: 95px;
+    }
+    .feedback-block {
+        min-height: 550px;
+    }
+    .feedback-block-input  {
+          width: 100%;
+          padding-top: 59px;
+      }
+    .footer {
+        flex-direction: column-reverse;
+        min-height: 143px;        
+    }
+    .links-block-copy {
+        margin-left: 0;
+        margin-bottom: 9px;
+      }
+      .links-block-links {
+        margin-right: 0;
+        margin-top: 43px;
+      }
+  }

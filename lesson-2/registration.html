@@ -17,14 +17,57 @@
             <a href="#"><img src="img/search.png" alt="search" class="search"></a>
         </div>
         <div class="logo-block logo-block-float-r">
-            <a href="#"><img src="img/menu.png" alt="menu"></a>
-            <a href="#"><img src="img/person.png" alt="profile"></a>
-            <a href="cart.html"><img src="img/shopping_cart.png" alt="shopping cart"></a>
+            <div class="menu-burger">
+                <input type="checkbox" id="menu">
+                <label for="menu"><img src="img/menu.png" alt="menu"></label>
+                    <div class="overlay-menu">
+                        <nav class="nav-menu">
+                            <label class="icon-close" for="menu"><svg width="13" height="13" viewBox="0 0 13 13" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M7.4158 6.00409L11.7158 1.71409C11.9041 1.52579 12.0099 1.27039 12.0099 1.00409C12.0099 0.73779 11.9041 0.482395 11.7158 0.294092C11.5275 0.105788 11.2721 0 11.0058 0C10.7395 0 10.4841 0.105788 10.2958 0.294092L6.0058 4.59409L1.7158 0.294092C1.52749 0.105788 1.2721 -1.9841e-09 1.0058 0C0.739497 1.9841e-09 0.484102 0.105788 0.295798 0.294092C0.107495 0.482395 0.0017066 0.73779 0.0017066 1.00409C0.0017066 1.27039 0.107495 1.52579 0.295798 1.71409L4.5958 6.00409L0.295798 10.2941C0.20207 10.3871 0.127676 10.4977 0.0769072 10.6195C0.0261385 10.7414 0 10.8721 0 11.0041C0 11.1361 0.0261385 11.2668 0.0769072 11.3887C0.127676 11.5105 0.20207 11.6211 0.295798 11.7141C0.388761 11.8078 0.499362 11.8822 0.621222 11.933C0.743081 11.9838 0.873786 12.0099 1.0058 12.0099C1.13781 12.0099 1.26852 11.9838 1.39038 11.933C1.51223 11.8822 1.62284 11.8078 1.7158 11.7141L6.0058 7.41409L10.2958 11.7141C10.3888 11.8078 10.4994 11.8822 10.6212 11.933C10.7431 11.9838 10.8738 12.0099 11.0058 12.0099C11.1378 12.0099 11.2685 11.9838 11.3904 11.933C11.5122 11.8822 11.6228 11.8078 11.7158 11.7141C11.8095 11.6211 11.8839 11.5105 11.9347 11.3887C11.9855 11.2668 12.0116 11.1361 12.0116 11.0041C12.0116 10.8721 11.9855 10.7414 11.9347 10.6195C11.8839 10.4977 11.8095 10.3871 11.7158 10.2941L7.4158 6.00409Z"/>
+                                </svg></label>
+                            <div class="nav-menu-div">
+                                <p class="nav-title">MENU</p>
+                                <p class="nav-heading">MAN</p>
+                                <ul class="nav-list">
+                                <li class="nav-li"><a href="#" class="nav-link">Accessories</a></li>
+                                <li class="nav-li"><a href="#" class="nav-link">Bags</a></li>
+                                <li class="nav-li"><a href="#" class="nav-link">Denim</a></li>
+                                <li class="nav-li"><a href="#" class="nav-link">T-Shirts</a></li>
+                                </ul>
+                            </div>
+                            <div class="nav-menu-div">
+                                <p class="nav-heading">WOMAN</p>
+                                <ul class="nav-list">
+                                <li class="nav-li"><a href="#" class="nav-link">Accessories</a></li>
+                                <li class="nav-li"><a href="#" class="nav-link">Jackets & Coats</a></li>
+                                <li class="nav-li"><a href="#" class="nav-link">Polos</a></li>
+                                <li class="nav-li"><a href="#" class="nav-link">T-Shirts</a></li>
+                                <li class="nav-li"><a href="#" class="nav-link">Shirts</a></li>
+                                </ul>
+                            </div>
+                            <div class="nav-menu-div">
+                                <p class="nav-heading">KIDS</p>
+                                <ul class="nav-list">
+                                    <li class="nav-li"><a href="#" class="nav-link">Accessories</a></li>
+                                    <li class="nav-li"><a href="#" class="nav-link">Jackets & Coats</a></li>
+                                    <li class="nav-li"><a href="#" class="nav-link">Polos</a></li>
+                                    <li class="nav-li"><a href="#" class="nav-link">T-Shirts</a></li>
+                                    <li class="nav-li"><a href="#" class="nav-link">Shirts</a></li>
+                                    <li class="nav-li"><a href="#" class="nav-link">Bags</a></li>
+                                </ul>
+                            </div>
+                                
+                        </nav>
+                    </div>
+            </div>
+            
+            <a href="registration.html"><img src="img/person.png" alt="profile" class="profile-logo"></a>
+            <a href="cart.html"><img src="img/shopping_cart.png" alt="shopping cart" class="shopping-cart-logo"></a>
         </div>
     </header>
     <main>
-        <section class="new_arrivals container">
-            <h1 class="new_arrivals-left">REGISTRATION</h1>
+        <section class="new_arrivals new_arrivals-reg container">
+            <h1 class="new_arrivals-left new_arrivals-left-reg">REGISTRATION</h1>
         </section>
         <section class="cart-block registration-block container">
            <h2 class="visually-hidden">Заголовок секции</h2>
@@ -68,27 +111,27 @@
                     <svg width="20" height="16" class="loyalty-svg" viewBox="0 0 20 16" xmlns="http://www.w3.org/2000/svg">
                     <path d="M19.8035 0H18.0904C17.8502 0 17.6222 0.111827 17.4752 0.303176L7.3702 13.2826L2.52481 7.05754C2.45151 6.96318 2.35808 6.88688 2.25153 6.83438C2.14499 6.78187 2.0281 6.75451 1.90963 6.75437H0.196467C0.032258 6.75437 -0.0584248 6.94572 0.0420614 7.07494L6.75503 15.6981C7.06874 16.1006 7.67166 16.1006 7.98782 15.6981L19.9579 0.318087C20.0584 0.191349 19.9677 0 19.8035 0Z" />
                     </svg>
-                    15% off welcome offer</li>
+                <p>15% off welcome offer</p></li>
                 <li class="loyalty-p loyalty-li">
                     <svg width="20" height="16" class="loyalty-svg" viewBox="0 0 20 16" xmlns="http://www.w3.org/2000/svg">
                     <path d="M19.8035 0H18.0904C17.8502 0 17.6222 0.111827 17.4752 0.303176L7.3702 13.2826L2.52481 7.05754C2.45151 6.96318 2.35808 6.88688 2.25153 6.83438C2.14499 6.78187 2.0281 6.75451 1.90963 6.75437H0.196467C0.032258 6.75437 -0.0584248 6.94572 0.0420614 7.07494L6.75503 15.6981C7.06874 16.1006 7.67166 16.1006 7.98782 15.6981L19.9579 0.318087C20.0584 0.191349 19.9677 0 19.8035 0Z" />
                     </svg>
-                    Free shipping, returns and exchanges on all orders</li>
+                <p>Free shipping, returns and exchanges on all orders</p></li>
                 <li class="loyalty-p loyalty-li">
                     <svg width="20" height="16" class="loyalty-svg" viewBox="0 0 20 16" xmlns="http://www.w3.org/2000/svg">
                         <path d="M19.8035 0H18.0904C17.8502 0 17.6222 0.111827 17.4752 0.303176L7.3702 13.2826L2.52481 7.05754C2.45151 6.96318 2.35808 6.88688 2.25153 6.83438C2.14499 6.78187 2.0281 6.75451 1.90963 6.75437H0.196467C0.032258 6.75437 -0.0584248 6.94572 0.0420614 7.07494L6.75503 15.6981C7.06874 16.1006 7.67166 16.1006 7.98782 15.6981L19.9579 0.318087C20.0584 0.191349 19.9677 0 19.8035 0Z" />
                         </svg>
-                        $10 off a purchase on your birthday</li>
+                    <p>$10 off a purchase on your birthday</p></li>
                 <li class="loyalty-p loyalty-li">
                     <svg width="20" height="16" class="loyalty-svg" viewBox="0 0 20 16" xmlns="http://www.w3.org/2000/svg">
                         <path d="M19.8035 0H18.0904C17.8502 0 17.6222 0.111827 17.4752 0.303176L7.3702 13.2826L2.52481 7.05754C2.45151 6.96318 2.35808 6.88688 2.25153 6.83438C2.14499 6.78187 2.0281 6.75451 1.90963 6.75437H0.196467C0.032258 6.75437 -0.0584248 6.94572 0.0420614 7.07494L6.75503 15.6981C7.06874 16.1006 7.67166 16.1006 7.98782 15.6981L19.9579 0.318087C20.0584 0.191349 19.9677 0 19.8035 0Z" />
                         </svg>
-                        Early access to products</li>
+                        <p>Early access to products</p></li>
                 <li class="loyalty-p loyalty-li">
                     <svg width="20" height="16" class="loyalty-svg" viewBox="0 0 20 16" xmlns="http://www.w3.org/2000/svg">
                         <path d="M19.8035 0H18.0904C17.8502 0 17.6222 0.111827 17.4752 0.303176L7.3702 13.2826L2.52481 7.05754C2.45151 6.96318 2.35808 6.88688 2.25153 6.83438C2.14499 6.78187 2.0281 6.75451 1.90963 6.75437H0.196467C0.032258 6.75437 -0.0584248 6.94572 0.0420614 7.07494L6.75503 15.6981C7.06874 16.1006 7.67166 16.1006 7.98782 15.6981L19.9579 0.318087C20.0584 0.191349 19.9677 0 19.8035 0Z" />
                         </svg>
-                        Exclusive offers & rewards</li>
+                    <p>Exclusive offers & rewards</p></li>
             </ul>
         </div>         
 
@@ -106,7 +149,7 @@
                 <h2 class="feedback-block-input-text-h2">SUBSCRIBE</h2>
                 <h2 class="feedback-block-input-text-h3">FOR OUR NEWLETTER AND PROMOTION</h2> </div>
             <form class="feedback-block-input-button" action="#">
-                <input type="email" name="email" id="email" placeholder="Enter Your Email" required>
+                <input type="email" name="email" placeholder="Enter Your Email" required>
                 <input type="submit" value="Subscribe"> </form>
         </div>
     </section>
