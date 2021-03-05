@@ -48,6 +48,7 @@
 .products-models-block-link {
     @include min-size (360px, 420px);
     display: block;
+    position: inherit;
 }
 
 .products-models-block-overlay {
@@ -72,6 +73,7 @@
     display: flex;
     align-items: center;
 }
+
 
 .products-models-block-btn {
     color: #ffffff;
@@ -249,6 +251,9 @@
         border: none;
         outline: none;
     }
+    &:hover {
+        outline: 1px solid #E8E8E8;
+    }
 }
 .filter-block-left[open] {
     padding-left: 16px;
@@ -329,17 +334,25 @@
     background: none;
     box-shadow: none;
     z-index: 1;
+    
 }
 
 .trending[open]>summary {
     border: none;
     outline: none;
-    color: #6F6E6E;   
+    color: #6F6E6E; 
+    color: $pink; 
+}
+.trending [open]>summary svg {
+    fill: #EF5B70;    
 }
 .trending-sum {
     font-weight: normal;
     color: #6F6E6E;
     width: 100%;
+        &:hover {
+            color: $black;
+        }
 }
 .trending-sum svg {
     fill: #6F6E6E;
@@ -356,6 +369,7 @@
 .trending-ul {
     margin-top: 7px;
     margin-left: 9px;
+    text-align: left;
 }
 .filter-li input[type=checkbox] {
     margin-top: 7px;
@@ -372,6 +386,12 @@
 }
 .price-block {
     width: 89px;
+}
+.ch-size {
+    width: 111px;
+}
+.quantity-cl {
+    width: 90px;
 }
 
 

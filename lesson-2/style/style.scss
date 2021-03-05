@@ -38,9 +38,15 @@ $pink: #F16D7F;
     padding: 0;
 }
 
-body {
+html, body {
     margin: 0;
     font-family: 'Lato', sans-serif;
+    min-height: 100vh;
+}
+body {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
 }
 
 .container {
@@ -110,6 +116,9 @@ body {
 .registration-block {
     margin-top: 64px;
     margin-bottom: 96px;
+    display: flex;
+    flex-direction: row;
+    align-items: start;
 }
 .radio-reg-block {
     margin-top: 11px;
@@ -178,6 +187,7 @@ body {
         margin-right: 22px;
         fill: black;
     }
+    
 }
 @media (max-width: 590px) {
     .registration-block {

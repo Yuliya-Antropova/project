@@ -3,16 +3,20 @@
     @include flex-jcc;
     align-items: center;
     background-color: #F1E4E6;
+    position: relative;
+
 }
 
 .promo-men-bcg {
-    margin-left: -20%;
+    margin-left: -764px;
     min-height: 764px;
+    position: absolute;
 }
 
 .promo-bgc {
     display: flex;
     width: 50%;
+    margin-right: -50%;
 }
 
     
@@ -51,6 +55,10 @@
     @include min-size (31.6%, 260px);
     text-align: center;
     background-size: cover;
+        &:hover {
+            background-color: #211616;
+            opacity: 0.9;
+        }
     /*transition-timing-function: ease;
     &:hover {
         transform: rotateY(360deg);
@@ -104,7 +112,11 @@
     text-align: center;
     margin-top: 30px;
     background-color: #211616;
-    background-size: cover;
+    background-size: cover;    
+        &:hover {
+            background-color: #211616;
+            opacity: 0.9;
+        }
 }
 @media (max-width: 1170px) {
     .promo {
@@ -113,7 +125,7 @@
     
     .promo-men-bcg {
         min-height: 500px;
-        margin-left: -10%;
+        margin-left: -500px;
     }
     .promo-men-bcg img {
         max-height: 500px;
@@ -151,7 +163,7 @@
     
     .promo-men-bcg {
         min-height: 368px;
-        margin-left: -5%;
+        margin-left: -368px;
     }
     .promo-men-bcg img {
         max-height: 368px;
@@ -182,8 +194,8 @@
     }
     
     .promo-men-bcg {
-        min-height:250px;
-        margin-left: -5%;
+        min-height: 250px;
+        margin-left: -250px;
     }
     .promo-men-bcg img {
         max-height: 250px;
@@ -216,6 +228,8 @@
     }
     .promo-bgc {
         width: 263px;
+        margin-left: 0;
+        margin-right: 0;
     }
     .promo-bgc-text {
         margin-top: 148px;

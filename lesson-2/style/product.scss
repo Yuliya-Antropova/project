@@ -40,7 +40,9 @@
     padding-bottom: 65px;
 }
 .filter-block-product {
-    display: inline-block;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 .filter-block-center-product {
     width: 373px;
@@ -49,7 +51,7 @@
     margin-left: 9px;
 }
 .product-description {
-    margin-bottom: 81px;
+    margin-bottom: 128px;
 }
 .product-description-p {
     @include text-w-s-lh (300, 14px, 17px);
@@ -74,7 +76,8 @@
     @include text-w-s-lh (300, 24px, 29px);
 }
 .product-description-hr2 {
-    margin: 64.5px;
+    margin-top: 64.5px;
+    margin-bottom: 64.5px;
     background-color: #EAEAEA;
     @include size(642px, 1px);
     display: inline-block;
@@ -89,11 +92,15 @@
     @include size(212px, 49px);
     padding-right: 0;
     text-align: center;
-   
+    @include text-w-s-lh(normal, 16px, 19px);   
+}
+.button-cart-product[value] {
+    padding-left: 7px;
 }
 .products-models-block-btn:hover {
     background-color: #FF6A6A;
     color: #FFf;
+    transition: 0.3s;
     
 }
 .products-svg {
@@ -103,4 +110,66 @@
 .products-models-catalog {
     min-height: 0;
     margin-bottom: 98px;
+}
+@media (max-width: 800px) {
+    .product-background {
+        box-shadow: none;
+        min-height: 624px;
+    }
+    .slider-img {
+        height: 624px;
+    }
+    .product-description {
+        margin-top: 0;
+    }
+    .product-description-2 {
+        outline: none;
+        border-top: 1px solid #EAEAEA;
+        border-bottom: 1px solid #EAEAEA;
+    }
+    .products-models-child {
+        display: none;
+    }
+}
+@media (max-width: 800px) {
+    .product-description-text {
+        width: 400px;
+    }
+    .product-description-hr2 {
+        width: 400px;
+    }
+}
+@media (max-width: 500px) {    
+    .slider-img {
+        height: 454px;
+    }
+    .product-description {
+        margin-bottom: 64px;
+    }
+    .product-description-text {
+        width: 326px;
+    }
+    .product-description-hr2 {
+        width: 175px;
+        margin-top: 32px;
+        margin-bottom: 48px;
+    }
+    .filter-block-center-product {
+        width: 304px;
+    }
+    .products-models-catalog {
+        margin-bottom: 64px;
+    }
+    .ch-color {
+        width: 100px;
+    }
+    .ch-product {
+        @include text-w-s-lh(normal, 10px, 12px);
+    }
+    .ch-size {
+        width: 85px;
+    }
+    .quantity-cl {
+        width: 71px;
+    }
 }

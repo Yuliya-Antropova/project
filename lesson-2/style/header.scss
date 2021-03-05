@@ -21,9 +21,20 @@
     width: 168px;
     padding-top: 7px;
 }
-
-.menu-burger img {
-    cursor: pointer;
+.menu-burger {
+  z-index: 5;
+}
+.menu-burger-img {
+    cursor: pointer;    
+    fill: #E8E8E8;
+      &:hover {
+        fill: $pink;
+        transition: 0.3s;
+      }
+      &:focus {
+        border: none;
+        outline: none;
+      }
 }
 #menu {
     display: none;
@@ -58,6 +69,16 @@
     right: 17px;
     top: 17px;
   }
+  .icon-close svg {
+    &:hover {
+      fill: $pink;
+      transition: 0.3s;
+    }
+    &:focus {
+      border: none;
+      outline: none;
+    }
+  }
   .nav-title {
       @include text-w-s-lh(700, 14px, 17px);
       color: $black;
@@ -72,20 +93,52 @@
       list-style-type: none;
       padding-left: 21px;
   }
-  .nav-li {
-    
+  .nav-li {    
     padding-top: 11px;
   }
   .nav-link {
     @include text-w-s-lh(400, 14px, 17px);
     color: #6F6E6E;
     text-decoration: none;
+      &:hover {
+        color: $black;
+        transition: 0.3s;
+      }
+  }
+  .search {
+    fill: #E8E8E8;
+      &:hover {
+        fill: $pink;
+        transition: 0.3s;
+      }
+      &:focus {
+        border: none;
+        outline: none;
+      }
   }
   .profile-logo {
       margin-left: 33px;
+      fill: #E8E8E8;
+        &:hover {
+          fill: $pink;
+          transition: 0.3s;
+        }
+        &:focus {
+          border: none;
+          outline: none;
+        }
   }
   .shopping-cart-logo {
     margin-left: 33px;
+    fill: #E8E8E8;
+      &:hover {
+        fill: $pink;
+        transition: 0.3s;
+      }
+      &:focus {
+        border: none;
+        outline: none;
+      }
   }
   @media (max-width: 788px) {
     .logo-block-float-l {
