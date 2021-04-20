@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Homework</title>
+		<meta charset="utf-8">
+		<meta name='viewport' content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0' />
+	</head>
+    <body>
+	
+        <script>
+           "use strict"
+
+            //Домашнее задание 1.
+
+            //пример 1
+            /*
+            т.к. "+" стоит перед началом второго операнда (а), 
+            то сначала производится увеличение "а" на 1, а затем полученнный результат присваивается в переменную.
+            Т.е. с=1+1(а) - ответ: 2
+            */           
+            let a = 1, b = 1, c, d;
+            c = ++a;
+            alert(c); 
+
+            //пример 2
+            /*
+            т.к. "+" стоит перед началом второго операнда (а), 
+            то сначала производится присваивание значения "b" в переменную, а "b" увеличивается на 1.
+            Т.е. с=1(b)- ответ: 1, а только потом b+1           
+            */            
+            d = b++;
+            alert(d); //ответ: 1
+
+            //пример 3
+            /*
+              т.к. в 1-м примере было "a++", т.е. а=2. Затем, полученное значение черех "+" увеличивается еще на "1", 
+              т.о. теперь а=3. Итого: с=2+3, с=5  
+            */ 
+            c = 2 + ++a;
+            alert(c); //ответ: 5
+
+            //пример 4
+            /*
+             в примере 2, значение b было увеличено на 1, т.о. b=2. Т.е. d=2+2++, d=4. 
+             Операция b++ производится уже после присвоения результата сложения переменной d.           
+            */ 
+            d = 2 + b++;
+            alert(d); //ответ: 4
+
+            /*
+             В результате вычисления в примере №3, значение а стало равняться 3         
+            */ 
+            alert(a); //3
+
+            /*
+             В результате вычисления в примере №4, значение b стало равняться 3         
+            */ 
+            alert(b); //3
+            
+        </script>  
+
+        <script>
+            "use strict"
+            //Домашнее задание 2.
+
+            /*
+             Данное выражение можно переписать как x = 1 + (f = f*2). x=5        
+            */ 
+            let f = 2;
+            let x = 1 + (f *= 2);
+
+        </script>
+
+        <script>
+            "use strict"
+            //Домашнее задание 3.
+
+            let a1 = +prompt("Задайте первое число, положительное или отрицательное");
+            let b1 = +prompt("Задайте второе число, положительное или отрицательное");
+            let dif = a1 - b1;
+            let mult = a1 * b1;
+            let sum = a1 + b1;
+
+            if (a1>=0 && b1>=0) {
+                alert(dif);
+            } else if (a1<0 && b1<0) {
+                alert(mult);
+            } else if ((a1>=0 && b1<0) || (a1<0 && b1>=0)) {
+                alert(sum);
+            }
+
+        </script>
+
+
+        <script>
+            "use strict"
+            //Домашнее задание 4.
+
+            let a2 = +prompt("Задайте первое число");
+            let b2 = +prompt("Задайте второе число");
+            
+            function sum1() {
+                return(a2 + b2);
+            }
+            function dif1() {
+                return(a2 - b2);
+            }
+            function div1() {
+                return(a2 / b2);
+            }
+            function mult1() {
+                return(a2 * b2);
+            }
+
+            alert(sum1(a2, b2));
+            alert(dif1(a2, b2));
+            alert(div1(a2, b2));
+            alert(mult1(a2, b2));
+
+        </script>
+
+        <script>
+            "use strict"
+            //Домашнее задание 5.
+
+            let arg1 = +prompt("Задайте первое число");
+            let arg2 = +prompt("Задайте второе число");
+            let operation = prompt("Что вы хотите сделать с этими числами (сложить, вычесть, умножить, разделить)?").toLowerCase();
+            
+            function mathOperation() {
+                let result = 0;
+                switch(operation) {
+                    case "сложить":
+                        result = arg1 + arg2;
+                        break;
+                    case "вычесть":
+                        result = arg1 - arg2;
+                        break;
+                    case "умножить":
+                        result = arg1 * arg2;
+                        break;
+                    case "разделить":
+                        result = arg1 / arg2;
+                        break;
+                }
+            return(result);
+            }
+
+            alert(mathOperation(arg1, arg2, operation));
+
+        </script>
+
+        <script>
+            "use strict"
+            //Домашнее задание 6.
+
+            let cash = +prompt("Сколько денег в рублях Вы хотите положить на счет в банке?");
+            let ends = ["рубль", "рубля", "рублей"]
+            
+            function contribution() {
+                if(cash % 100 >= 11 && cash % 100 <= 19) {
+                    return ends [2];
+                } else {
+                    switch(cash % 10) {
+                    case (1):
+                        return ends[0];
+                    case (2):
+                    case (3):
+                    case (4): 
+                        return ends[1];
+                    default: return ends[2];
+                    }
+                }
+            }
+
+            alert("Ваша сумма в " + cash + " " + contribution(cash) + " успешно зачислена.");
+
+        </script>
+	</body>
+</html>
