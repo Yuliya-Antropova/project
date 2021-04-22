@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Homework</title>
+    <meta charset="utf-8">
+    <meta name='viewport' content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0' />
+</head>
+
+<body>
+
+    <script>
+        "use strict"
+
+        //Домашнее задание 1.
+
+        for (let i = 0; i <= 10; i++) {
+            if (i == 0) {
+                console.log(i + " Это ноль");
+            } else if (i % 2 > 0) {
+                console.log(i + " Это нечетное число");
+            } else {
+                console.log(i + " Это четное число");
+            }
+        }
+
+    </script>
+
+    <script>
+        "use strict"
+
+        //Домашнее задание 2.
+
+        const post = {
+            author: "John", //вывести этот текст
+            postId: 23,
+            comments: [
+                {
+                    userId: 10,
+                    userName: "Alex",
+                    text: "lorem ipsum",
+                    rating: {
+                        likes: 10,
+                        dislikes: 2 //вывести это число
+                    }
+                },
+                {
+                    userId: 5, //вывести это число
+                    userName: "Jane",
+                    text: "lorem ipsum 2", //вывести этот текст
+                    rating: {
+                        likes: 3,
+                        dislikes: 1
+                    }
+                },
+            ]
+        };
+
+        console.log(post.author);
+        console.log(post.comments[0].rating.dislikes);
+        console.log(post.comments[1].userId);
+        console.log(post.comments[1].text);
+
+    </script>
+
+
+    <script>
+        "use strict"
+
+        //Домашнее задание 3.
+
+        const products = [
+            {
+                id: 3,
+                price: 200,
+            },
+            {
+                id: 4,
+                price: 900,
+            },
+            {
+                id: 1,
+                price: 1000,
+            },
+        ];
+
+        products.forEach(product => product.price = +product.price - +(product.price * 0.15));
+        console.log(products);
+
+    </script>
+
+    <script>
+        "use strict"
+
+        //Домашнее задание 4.
+
+        const products4 = [
+            {
+                id: 3,
+                price: 127,
+                photos: [
+                    "1.jpg",
+                    "2.jpg",
+                ]
+            },
+            {
+                id: 5,
+                price: 499,
+                photos: []
+            },
+            {
+                id: 10,
+                price: 26,
+                photos: [
+                    "3.jpg"
+                ]
+            },
+            {
+                id: 8,
+                price: 78,
+            },
+        ];
+
+        let productPhotoSet = products4.filter(productPhoto => "photos" in productPhoto && productPhoto.photos.length > 0);
+        console.log(productPhotoSet);
+
+
+        products4.sort(function (price1, price2) {
+            if (price1.price > price2.price) {
+                return 1;
+            }
+            if (price1.price < price2.price) {
+                return -1;
+            }
+        });
+        console.log(products4);
+
+    </script>
+
+    <script>
+        "use strict"
+
+        //Домашнее задание 5.
+
+        for (let d = 0; d < 10; console.log(d++));
+
+    </script>
+
+    <script>
+        "use strict"
+
+        //Домашнее задание 6.
+
+        let textX = "";
+        for (let f = 0; f < 20; f++) {
+            console.log(textX += "x");
+        };
+
+    </script>
+
+</body>
+
+</html>
