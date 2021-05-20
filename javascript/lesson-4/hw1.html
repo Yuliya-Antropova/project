@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        'use strict!'
+        
+        let userAnswer = Math.floor(parseInt(prompt('Введите число в диапазоне от 0 до 999')));
+        let obj = {
+            hundreds: '',
+            tens: '',
+            units: '',
+        };
+        function objNumber() {
+            if (userAnswer >= 0 && userAnswer <= 999) {
+                let userArr = userAnswer.toString().split('').reverse();
+                if (userArr.length == 1) {
+                    userArrN = userArr.concat('0', '0');
+                } else if (userArr.length == 2) {
+                    userArrN = userArr.concat('0'); 
+                } else {
+                    userArrN = userArr;
+                }
+                obj.hundreds = userArrN[2];
+                obj.tens = userArrN[1];
+                obj.units = userArrN[0];
+                console.log(obj);
+            } else {
+                obj = {};
+                console.log('Введено некорректное число');
+                console.log(obj);                 
+            }
+        }
+        objNumber(userAnswer);
+
+    </script>
+</body>
+</html>

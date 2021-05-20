@@ -1,0 +1,97 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        //ДЗ 1.1
+
+        "use strict"
+        function Product(name, price) {
+            this.name = name;
+            this.price = price;
+        }
+        Product.prototype.make25PercentDiscount = function () {
+            console.log(this.price * 0.75);
+        }
+
+        let product1 = new Product("a1", "100");
+        product1.make25PercentDiscount();
+
+        class ProductES6 {
+            constructor(name, price) {
+                this.name = name;
+                this.price = price;
+            }
+            make25PercentDiscount() {
+                console.log(this.price * 0.75);
+            }
+        }
+        let product2 = new ProductES6("a2", "200");
+        product2.make25PercentDiscount();
+    </script>
+
+    <script>
+        //ДЗ 1.2
+
+        "use strict"
+        function Post(author, text, date) {
+            this.author = author;
+            this.text = text;
+            this.date = date;
+        }
+        Post.prototype.edit = function () {
+            this.text = prompt("Введите текст");
+            console.log(this.text);
+        }
+
+        function AttachedPost(author, text, date, highlighted) {
+            Post.call(this, author, text, date);
+            this.highlighted = false;
+        }
+
+        AttachedPost.prototype = Object.create(Post.prototype);
+        AttachedPost.prototype.constructor = AttachedPost.prototype;
+
+        AttachedPost.prototype.makeTextHighlighted = function () {
+            this.highlighted = true;
+            console.log(this.highlighted);
+        }
+
+        let AttachedPost1 = new AttachedPost("a1", "100", "13", "10");
+        AttachedPost1.edit();
+        AttachedPost1.makeTextHighlighted();
+
+        class PostES6 {
+            constructor(author, text, date) {
+            this.author = author;
+            this.text = text;
+            this.date = date;
+        }
+        editES6() {
+            this.text = prompt("Введите текст");
+            console.log(this.text);
+        }}
+
+        class AttachedPostES6 extends PostES6 {
+            constructor(author, text, date, highlighted) {
+                super(author, text, date);
+                this.highlighted = false;
+            }
+            makeTextHighlightedES6 () {
+                this.highlighted = true;
+                console.log(this.highlighted);
+            }
+        }
+
+        let AttachedPost2 = new AttachedPostES6("a1", "100", "13", "10");
+        AttachedPost2.editES6();
+        AttachedPost2.makeTextHighlightedES6();
+    </script>
+</body>
+</html>
