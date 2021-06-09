@@ -3,17 +3,17 @@ const API_URL =
 
 //класс карточки товара
 class GoodsItem {
-  constructor(product_name, price, id) {
+  constructor(product_name, price, id_product) {
     this.product_name = product_name;
     this.price = price;
-    this.id = id;
+    this.id_product = id_product;
   }
   //рисует карточку
   render() {
     return `<div class="goods-item"><h3>${this.product_name}</h3>
     <div><img class="goods-img" src="http://unsplash.it/150/150?random&gravity=center" alt=""></div>
     <p>${this.price}</p>
-    <button id="${this.id}" ItemId="${this.id}" class='cart-button buy-button'>Add to cart</button></div>`;
+    <button id="${this.id_product}" ItemId="${this.id_product}" class='cart-button buy-button'>Add to cart</button></div>`;
   }
 }
 
@@ -65,7 +65,7 @@ class ShoppingCart extends GoodsList {
       button.addEventListener('click', (event) => {
         //здесь вопрос. почему-то не могу обращаться по id к элементу. Когда был список товаров, такой проблемы не было
         // обращалась "let goodItemCart = this.goods[event.target.id]", товар выводился. сейчас выводит undefined
-        let goodItemCart = this.goods.filter(cartKey => cartKey.id_product == event.target.id);
+        let goodItemCart = this.goods.find(cartKey => cartKey.id_product == event.target.id);
         this.listCart.push(goodItemCart);
         this.renderCart();
       })
@@ -83,7 +83,6 @@ class ShoppingCart extends GoodsList {
           // но через неско-ко итераций, элемент начинает заменяться. Например, удалила все из корзины, кроме мышки.
           //при добавлении ноутбука, мышка заменяется на ноутбук. самое интересное, что это может происходить через раз.
        this.listCart.pop(event.target.id);
-        console.log(this.listCart)
         event.target.parentNode.remove();        
       })
       console.log(this.listCart)
@@ -96,7 +95,7 @@ class ShoppingCart extends GoodsList {
     renderCart() {
       let listCartHtml = "";
       document.querySelector('.cart-header').style.display = 'block';
-      this.listCart.flat().forEach((goodCart) => {
+      this.listCart.forEach((goodCart) => {
         const goodItemCart = new GoodsInShoppingCart(goodCart.product_name, goodCart.price, goodCart.id_product, goodCart.size, goodCart.color, goodCart.quantity);
         listCartHtml += goodItemCart.render();
       });
@@ -117,8 +116,8 @@ class GoodsInShoppingCart {
     <div><img class="goods-img" src="http://unsplash.it/150/150?random&gravity=center" alt=""></div>
     <p>${this.price}</p>
     
-    <button id="${this.id}" ItemId="${this.id}" class='cart-button buy-button'>And one more</button>
-    <button id="${this.id}" ItemId="${this.id}" class='cart-button remove-button'>Remove from cart</button></div>`;
+    <button id="${this.id_product}" ItemId="${this.id_product}" class='cart-button buy-button'>And one more</button>
+    <button id="${this.id_product}" ItemId="${this.id_product}" class='cart-button remove-button'>Remove from cart</button></div>`;
   }
 }
 
