@@ -1,0 +1,47 @@
+<html>
+
+<head>
+    <title>eShop</title>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="style.css" />
+    
+</head>
+
+<body>
+    <main class='container'>
+        <header class="header">
+            <div>
+                <p>Выберите свой бургер</p>
+            </div>
+        </header>
+        <main>
+            <div class="goods-list">
+                <div class="goods-list-size"><input type="radio" name="size" class="size-class" id="small">Маленький (50 рублей, 20 калорий)<br></div>
+                <div class="goods-list-size"><input type="radio" name="size" class="size-class" id="big">Большой (100 рублей, 40 калорий)<br></div>
+            </div>
+            
+            <div class="goods-list">
+                <div class="goods-list-size"><input type="radio" name="stuffing" class="stuffing-class" id="cheese">С сыром (+10 рублей, +20 калорий)<br></div>
+                <div class="goods-list-size"><input type="radio" name="stuffing" class="stuffing-class" id="salad">С салатом (+20 рублей, +5 калорий)<br></div>
+                <div class="goods-list-size"><input type="radio" name="stuffing" class="stuffing-class" id="potato">С картофелем (+15 рублей, +10 калорий)<br></div>
+            </div>
+
+            <div class="goods-list">
+                <div class="goods-list-size"><input type="checkbox" name="topping" class="topping-class" id="spicy">Приправа (+15 рублей, +0 калорий)<br></div>
+                <div class="goods-list-size"><input type="checkbox" name="topping" class="topping-class" id="souse">Майонез (+20 рублей, +5 калорий)<br></div>
+            </div>
+
+            <div class="goods-list">
+                <button class="cart-button">Рассчитать</button>
+            </div>
+
+            <div class="goods-list hidden">
+                <div class="order"></div>
+            </div>
+            
+        </main>
+    </main>
+    <script src="script.js"></script>
+</body>
+
+</html>
