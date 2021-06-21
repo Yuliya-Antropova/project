@@ -16,7 +16,6 @@
         <div class="goods-item-hidden" v-if="filteredGoods.length == 0">
           <h3>Нет данных</h3>
         </div>
-        <p class="cart-header" v-if="cartGoods.length > 0">Shopping Cart</p>
         <cart-list :goods-in-cart="cartGoods"></cart-list>
       </main>
     </div>
