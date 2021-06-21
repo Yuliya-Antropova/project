@@ -78,6 +78,17 @@ Vue.component("goods-item-in-cart", {
       `,
 });
 
+Vue.component("cartVisible"), {
+  methods: {
+    addToCart2() {
+      app.showBasket = true;
+    }
+  },
+  template: `
+  <p class="cart-header" v-bind="addToCart2">Shopping Cart</p>
+  `
+}
+
 const app = new Vue({
   el: "#app",
   data: {
