@@ -1,0 +1,26 @@
+<html>
+  <head>
+    <title>eShop</title>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+
+  <body>
+    <div id="app">
+      <header class="header">
+        <search @searching="filterGoods"></search>
+        <button class="cart-button" type="button">Корзина</button>
+      </header>
+      <main class="container">
+        <goods-list :goods="filteredGoods"></goods-list>
+        <div class="goods-item-hidden" v-if="filteredGoods.length == 0">
+          <h3>Нет данных</h3>
+        </div>
+        <p class="cart-header" v-if="cartGoods.length > 0">Shopping Cart</p>
+        <cart-list :goods-in-cart="cartGoods"></cart-list>
+      </main>
+    </div>
+  </body>
+  <script src="https://cdn.jsdelivr.net/npm/vue@2.5.17/dist/vue.js"></script>
+  <script src="script.js"></script>
+</html>
